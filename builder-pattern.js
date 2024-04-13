@@ -78,3 +78,30 @@ let userThree = new User("Bob", {
   address: new Address("12345", "Main St."),
 });
 console.log(userThree); // {name: 'Bob', age: 40, phone: "1234567890", address: Address {zip: '12345', street: 'Main St.'}}
+
+// Functional version of New Builder Pattern
+// Functional version of Address
+function createAddress(zip, street) {
+  return {
+    zip: zip,
+    street: street,
+  };
+}
+
+// Functional version of User
+function createUser(name, { age, phone = "1234567890", address } = {}) {
+  return {
+    name: name,
+    age: age,
+    phone: phone,
+    address: address,
+  };
+}
+
+// Usage example
+const user4 = createUser("Bob", {
+  age: 40,
+  address: createAddress("12345", "Main St."),
+});
+
+console.log(user4); // {name: 'Bob', age: 40, phone: "1234567890", address: {zip: '12345', street: 'Main St.'}}
