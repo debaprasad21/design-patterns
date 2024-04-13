@@ -105,3 +105,45 @@ function printUserP(id) {
     console.log("You are not allowed here");
   }
 }
+
+// Functional Version
+// Functional version of UserP
+function createUserP(id, name) {
+  return {
+    id: id,
+    name: name,
+    hasAccess: function () {
+      return this.name === "Bob";
+    },
+  };
+}
+
+// Functional version of NullUserP
+function createNullUserP() {
+  return {
+    id: -1,
+    name: "Guest",
+    hasAccess: () => false,
+  };
+}
+
+const usersf = [createUserP(1, "Bob"), createUserP(2, "John")];
+
+// Function to get user by ID
+function getUserF(id) {
+  const user = usersf.find((user) => user.id === id);
+  return user || createNullUserP();
+}
+
+// Function to print user information
+function printUserF(id) {
+  const user = getUserF(id);
+
+  console.log("Hello " + user.name);
+
+  if (user.hasAccess()) {
+    console.log("You have access");
+  } else {
+    console.log("You are not allowed here");
+  }
+}
