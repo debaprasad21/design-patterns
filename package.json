@@ -1,0 +1,21 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "description": "Design Patterns",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debaprasad21/design-patterns.git"
+  },
+  "author": "Debaprasad Sahoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debaprasad21/design-patterns/issues"
+  },
+  "homepage": "https://github.com/debaprasad21/design-patterns#readme"
+}
