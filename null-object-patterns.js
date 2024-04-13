@@ -5,7 +5,7 @@ class User {
   }
 
   hasAccess() {
-    return this.name === "Bob" || this.name === "John";
+    return this.name === "Bob";
   }
 }
 
@@ -44,6 +44,62 @@ function printUser(id) {
    * user access, and could cause bugs if we forget to add null checks.
    */
   if (user != null && user.hasAccess != null && user.hasAccess()) {
+    console.log("You have access");
+  } else {
+    console.log("You are not allowed here");
+  }
+}
+
+/**
+ *
+ * printUser(1); // Hello Bob, You have access
+ * printUser(2); // Hello John, You have access
+ * printUser(3); // Hello Guest, You are not allowed here
+ *
+ */
+
+// Null Object Pattern
+
+class UserP {
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+  }
+
+  hasAccess() {
+    return this.name === "Bob";
+  }
+}
+
+// Null User Class
+class NullUserP {
+  constructor() {
+    this.id = -1;
+    this.name = "Guest";
+  }
+
+  hasAccess() {
+    return false;
+  }
+}
+
+const usersp = [new UserP(1, "Bob"), new UserP(2, "John")];
+
+function getUserP(id) {
+  const user = usersp.find((user) => user.id === id);
+  if (user == null) {
+    return new NullUserP();
+  } else {
+    return user;
+  }
+}
+
+function printUserP(id) {
+  const user = getUserP(id);
+
+  console.log("Hello " + user.name);
+
+  if (user.hasAccess()) {
     console.log("You have access");
   } else {
     console.log("You are not allowed here");
