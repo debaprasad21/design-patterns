@@ -6,3 +6,4 @@
 2. Builder Pattern
 3. Singleton Pattern
    - Refer Branch [singleton](https://github.com/debaprasad21/design-patterns/tree/singleton) and image > Singleton.png
+4. Facade Pattern
