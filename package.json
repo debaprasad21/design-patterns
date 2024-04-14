@@ -1,0 +1,22 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "single-responsibility.js",
+  "type": "module",
+  "scripts": {
+    "s": "node single-responsibility.js",
+    "o": "node open-closed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debaprasad21/design-patterns.git#solid"
+  },
+  "author": "Debaprasad Sahoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debaprasad21/design-patterns/issues"
+  },
+  "homepage": "https://github.com/debaprasad21/design-patterns/tree/solid#readme"
+}
