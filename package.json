@@ -8,6 +8,8 @@
     "s": "node single-responsibility.js",
     "o": "node open-closed.js",
     "l": "node liskov-substitution.js",
+    "i": "node interface-segregation.js",
+    "d": "node dependency-inversion.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
